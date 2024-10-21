@@ -9,19 +9,24 @@
   <title>Zingen - Karaokê</title>
   <link rel="stylesheet" href="styles/index.css">
   <link
-  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-  rel="stylesheet">
-
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
+  <div class="flex gap-1">
+    <a href="#" class="btn btn-md">Label</a>
+    <span href="#" class="btn btn-sm">Label</span>
+    <button href="#" class="btn btn-lg">Label</a>
+  </div>
 
-<header>
-  <div class="container">
-  <h1>Teste</h1>
-</div>
-</header>
 
+  <div class="flex gap-1">
+    <a aria-label="Label" href="#" class="btn btn-md"></a> <!-- vai ser lido pelo leitores de tela e o texto do botao secundario vai estar vazio, pegando no css, porque conseguindo mudar a forma do texto em degrade
+    -->
+    <span aria-label="Label" href="#" class="btn btn-sm"></span>
+    <button aria-label="Label" href="#" class="btn btn-lg"></a>
+  </div>
 
 </body>
 

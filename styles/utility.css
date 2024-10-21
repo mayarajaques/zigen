@@ -1,21 +1,21 @@
-.py-base{
+.py-base {
   /*pading em cima e baixo- tela grande*/
   padding-block: var(--py-base);
 }
 
-.py-lg{
-   /*pading em cima e baixo- tela grande*/
+.py-lg {
+  /*pading em cima e baixo- tela grande*/
   padding-block: var(--py-lg);
 }
 
-.py-xl{
-   /*pading em cima e baixo- tela grande*/
+.py-xl {
+  /*pading em cima e baixo- tela grande*/
   padding-block: var(--py-xl);
 }
 
-.px-xl{
+.px-xl {
   /*pading em cima e baixo- tela mobile*/
- padding-inline: var(--px-lg);
+  padding-inline: var(--px-lg);
 }
 
 
@@ -26,23 +26,39 @@
 
 
   /*calculo do padding do mobile. É vezes 2 pq é os dois lados*/
-  width: min(var(--max-width), 100% - var(--px-lg) * 2);   /*pega o minimo entre os dois*/
+  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+  /*pega o minimo entre os dois*/
 
   border: solid violet;
-  margin-inline: auto; /*alinhado ao centro*/
+  margin-inline: auto;
+  /*alinhado ao centro*/
 }
 
 
-.desktop-oly{
-  display: none; /*é none porque tudo que estou usando, estou usando primeiro para o mobile e depois arrumo para desktop.
+.desktop-oly {
+  display: none;
+  /*é none porque tudo que estou usando, estou usando primeiro para o mobile e depois arrumo para desktop.
   quando aplicar numa div, essa div vai sumir, porque está none*/
 }
 
 /*em tela pequena um em baixo do outro
 em tela grande um do lado do outro*/
-.even-columns{
+.even-columns {
   display: grid;
   gap: 1rem;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
 }
 
 /*tamanho para tela grande*/
@@ -56,13 +72,13 @@ em tela grande um do lado do outro*/
 
 /*quando a tela for maior a div vai ser display block, ele sempre vai pegar o display inicial daquela tag especifica*
 Aparecendo e sumindo em telas grandes*/
-.desktop-oly{
+.desktop-oly {
   display: initial;
 }
 
 /*em tela pequena um em baixo do outro
 em tela grande um do lado do outro*/
-.even-columns{
+.even-columns {
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
 }

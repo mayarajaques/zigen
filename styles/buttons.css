@@ -1,0 +1,111 @@
+/*botao padrao*/
+.btn {
+
+  --btn-bg-color: var(--text-color-primary);
+  /*background do botao*/
+  --btn-color: var(--bg-color);
+
+  border: 0;
+  /*tirar bord do botao*/
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  /*a largura vai ser conforme conteudo, vai se encaixando*/
+
+  border-radius: .5rem;
+  font: var(--fw-md) var(--fs-base)/1.5rem var(--ff-sans);
+  /*24px*/
+
+  cursor: pointer;
+
+
+  /*background do meu doc inteiro*/
+  background: var(--btn-bg-color);
+  color: var(--btn-color);
+  /*cor texto*/
+
+
+}
+
+.btn:hover {
+
+  /*fundo degrade*/
+  --btn-bg-color: linear-gradient(90deg,
+      /*angulação que quero ver ele*/
+      var(--brand-color-secondary) 0%,
+      /*em 0%*/
+      var(--brand-color-primary)100%);
+  /*indo até 100% da cor*/
+
+
+  --btn-color: var(--surface-color);
+}
+
+
+/*botoes primarios*/
+/*3 tipos de botao, com tamanho 18px, 16px e 14px*/
+.btn-sm {
+  padding: .5rem 1rem;
+  font-size: var(--fs-sm);
+
+}
+
+.btn-md {
+  padding: .75rem 1.5rem;
+  font-size: var(--fs-md);
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem
+    /*18 n foi criado variavel*/
+}
+
+/*-----------definindo o botao secondary*-----------/
+/*todo btn que tiver um aria label a gente define que este é um secondary*/
+.btn[aria-label] {
+
+  position: relative;
+  /*relativo em reação a este botão*/
+
+
+
+  /*classe para fazer a borda gradiente e fundo preto*/
+  &::before {
+    content: "";
+    /*conteudo vazio*/
+    position: absolute;
+    /*absoluto ao de cima*/
+    border-radius: inherit;
+    /*pegar a borda herdada*/
+    inset: 1.5px; /*tamanho da borda do secondary*/
+    /*separa a borda do botão. se for 0, todo ele vai ter essa cor*/
+
+    background-color: var(--bg-color);
+    /*cor preta*/
+  }
+
+  /*clase para fazer o elemento de texto do botao*/
+    &::after {
+      /*crie um elemento depois*/
+      content: attr(aria-label);
+      /*pegar o atributo aria-label e colocar no after*/
+
+      /*colocando um fundo apenas na caixa do texto do botao*/
+      background: var(--btn-bg-color);
+
+      /*faça um recorte conforme o texto escrito*/
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      /*deixar transparente*/
+      color: transparent;
+
+      position: relative;
+      z-index: 1;
+      /*para a escrita subir no posicionamento ficando em cima da borda*/
+
+    }
+  }
