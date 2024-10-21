@@ -63,6 +63,12 @@
     /*18 n foi criado variavel*/
 }
 
+
+  /*
+  NO HTML
+   <a aria-label="Label" href="#" class="btn btn-md"></a> <
+  */
+  
 /*-----------definindo o botao secondary*-----------/
 /*todo btn que tiver um aria label a gente define que este é um secondary*/
 .btn[aria-label] {
@@ -73,6 +79,8 @@
 
 
   /*classe para fazer a borda gradiente e fundo preto*/
+
+
   &::before {
     content: "";
     /*conteudo vazio*/

@@ -1,0 +1,51 @@
+/*criando os icones de social*/
+a.social {
+  --bg-img: "";
+  background-image: var(--bg-img);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  /*para garantir q ele é block*/
+
+
+  /**/
+  --webkit-background-clip: initial;
+  background-clip: initial;
+
+  &[aria-label="tiktok"] {
+    --bg-img: url(../assets/icons/tiktok.svg);
+
+    /*quando passar mouse vai ter outra imagem*/
+    &:hover {
+      --bg-img: url(../assets/icons/tiktok-hover.svg);
+    }
+  }
+
+
+  &[aria-label="instagram"] {
+    --bg-img: url(../assets/icons/instagram.svg);
+
+    /*quando passar mouse vai ter outra imagem*/
+    &:hover {
+      --bg-img: url(../assets/icons/instagram-hover.svg);
+    }
+  }
+
+  &[aria-label="twitter"] {
+    --bg-img: url(../assets/icons/twitter.svg);
+
+    /*quando passar mouse vai ter outra imagem*/
+    &:hover {
+      --bg-img: url(../assets/icons/twitter-hover.svg);
+    }
+  }
+
+  &[aria-label="discord"] {
+    --bg-img: url(../assets/icons/discord.svg);
+
+    /*quando passar mouse vai ter outra imagem*/
+    &:hover {
+      --bg-img: url(../assets/icons/discord-hover.svg);
+    }
+  }
+}
