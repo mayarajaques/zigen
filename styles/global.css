@@ -1,1 +1,121 @@
-@import url(global.css);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /*neste app a gente vai usar*/
+}
+
+* {
+  /*resetar tudo*/
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  /*reset de todas as fontes do nosso projeto h1, strong*/
+
+  /*arruma a fonte para ficar mais suave*/
+  -webkit-font-smoothing: antialiase;
+  /* webkit motor de navegação*/
+  -moz-osx-smoothing: grayscale;
+  /*mozila*/
+
+}
+
+:root {
+
+  --bg-color: #09090b;
+  --surface-color: #18181B;
+  --stroke-color: #27272A;
+  --text-color-secondary: #A1A1AA;
+  --text-color-primary: #F4F4F5;
+
+  --brand-color-primary: #F7B733;
+  --brand-color-secondary: #FC4A1A;
+
+  --ff-sans: 'Inter', system-ui, sans-serif;
+  --fw-base: 400;
+  --fw-md: 500;
+  --fw-bold: 800;
+
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2.5rem;
+
+
+
+}
+
+htm {
+  /*fontes padroes de todo doc*/
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-base);
+  font-size: var(--ff-base);
+  line-height: 1.6;
+  /*160%*/
+  color: var(--text-color-primary);
+
+}
+
+body {
+  /*bg padrao*/
+  background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  /*120%*/
+  color: var(--text-color-primary);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.04em;
+
+}
+
+h1 {
+  font-size: var(--fs-2xl);
+
+}
+
+h2 {
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+
+}
+
+a {
+  /*tira decoração e herda do pai*/
+  text-decoration: none;
+  color: inherit;
+}
+
+/*tirando as bolinhas da ul
+mas tirando para alguns navegadores perde o sentido de ser uma lista, 
+entao quando colocar esse atributo role='list', ele considera como uma lista*/
+ul[role="list"]{
+  list-style: none;
+}
+
+
+
+@media(width >=80em) {
+
+  /* = 80*16 = 1280px - 'em' busca a fonte size pai, ou seja o root, mesmo que a pessoa mude no navegador*/
+  :root {
+
+    /*desktop*/
+    --fs-lg: 2rem;
+    /*32/16*/
+    --fs-xl: 3rem;
+    /*48/16*/
+    --fs-2xl: 4rem;
+    /*64/16 */
+
+
+  }
+}
