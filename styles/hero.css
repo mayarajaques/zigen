@@ -1,0 +1,61 @@
+#hero {
+
+
+  text-align: center;
+
+  /*pegar a imagem para ficar pequeno no mobile*/
+  & img[src*="music"] {
+    /*pegue qualquer coisa que tiver a palavra music*/
+    width: 12.875rem;
+    /*206px*/
+
+  }
+
+  /*olhando primeiro para  o mobile*/
+  & h1 {
+    margin-top: 1rem;
+  }
+
+  /*olhando primeiro para  o mobile*/
+  & p {
+    font: var(--fw-md) var(--fs-lg)/1.4 var(--ff-sans);
+    color: var(--text-color-secondary);
+    margin-top: .5rem;
+  }
+
+  &.buttons {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+/*quando for desktop*/
+/*aumenta a imagem quando for desktop*/
+@media(width >= 80em) {
+  #hero {
+
+    background: url(../assets/bg-hero-desktop.svg) no-repeat bottom center/contain;
+    padding-bottom: 15rem;
+
+    & img[src*="music"] {
+      /*pegue qualquer coisa que tiver a palavra music*/
+
+      width: 25.75rem;
+    }
+
+    & h1 {
+      margin-top: 1.5rem;
+    }
+
+    & p {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+    }
+
+    .buttons {
+      margin-top: 3rem;
+    }
+  }
+
+
+}
