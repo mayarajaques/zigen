@@ -1,0 +1,6 @@
+header {
+  & a:first-child {
+    /*pegando a logo*/
+    margin-right: auto;/*preenchendo tudo e jogando o resto para o canto direito*/
+  }
+}

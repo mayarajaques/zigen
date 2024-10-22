@@ -41,6 +41,11 @@
 
 
   --btn-color: var(--surface-color);
+
+  --webkit-background-clip: initial;
+  background-clip: initial;
+
+  color: var(--btn-color);
 }
 
 
@@ -68,7 +73,7 @@
   NO HTML
    <a aria-label="Label" href="#" class="btn btn-md"></a> <
   */
-  
+
 /*-----------definindo o botao secondary*-----------/
 /*todo btn que tiver um aria label a gente define que este é um secondary*/
 .btn[aria-label] {
@@ -116,4 +121,20 @@
       /*para a escrita subir no posicionamento ficando em cima da borda*/
 
     }
+  }
+
+  @media(width>= 80em){ /*se a largura for maior ou igual a 1280px*/
+
+  
+.btn-sm {
+  padding: .75rem 1.5rem;
+  font-size: var(--fs-md);
+}
+
+.btn-md {
+  padding: 1rem 2rem;
+  font-size: 1.125rem
+    /*18 n foi criado variavel*/
+}
+
   }

@@ -14,9 +14,9 @@
   /*reset de todas as fontes do nosso projeto h1, strong*/
 
   /*arruma a fonte para ficar mais suave*/
-  -webkit-font-smoothing: antialiase;
+  -webkit-font-smoothing: antialiased;
   /* webkit motor de navegação*/
-  -moz-osx-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
   /*mozila*/
 
 }
@@ -37,18 +37,20 @@
   --fw-md: 500;
   --fw-bold: 800;
 
+  /*fontes no mobile*/
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
   --fs-lg: 1.25rem;
   --fs-xl: 1.5rem;
   --fs-2xl: 2.5rem;
 
+  /*definindo paddings do container mobile*/
+    /*padding eixo y (cima e baixo)*/
   --py-base: 1rem;
-  /*padding eixo y (cima e baixo) mobile*/
-  --py-lg: 1.5rem;
-  /*mobile*/
   --py-xl: 3rem;
-  /*mobile*/
+  --py-lg: 1.5rem;
+
+  
   /*mudam quando estão na tela maior (olhar @media)*/
 
   /*pading direita e esquerda (eixo x)*/
@@ -57,11 +59,11 @@
 
 }
 
-htm {
+html {
   /*fontes padroes de todo doc*/
   font-family: var(--ff-sans);
   font-weight: var(--fw-base);
-  font-size: var(--ff-base);
+  font-size: var(--fs-base);
   line-height: 1.6;
   /*160%*/
   color: var(--text-color-primary);
@@ -78,6 +80,7 @@ h2,
 h3 {
   line-height: 1.2;
   /*120%*/
+  /*se n tiver pegar no copy css*/
   color: var(--text-color-primary);
   font-weight: var(--fw-bold);
   letter-spacing: -0.04em;
@@ -102,6 +105,7 @@ a {
   /*tira decoração e herda do pai*/
   text-decoration: none;
   color: inherit;
+  /*pai é ohtml*/
 }
 
 /*define o fundo do degrade no link*/
@@ -110,11 +114,12 @@ a:hover {
       var(--brand-color-secondary)0%,
       var(--brand-color-primary) 100%);
 
-   /*faça um recorte conforme o texto escrito*/
+  /*faça um recorte conforme o texto escrito*/
   --webkit-background-clip: text;
   background-clip: text;
 
-  color:transparent; /*tira a cor do texto*/
+  color: transparent;
+  /*tira a cor do texto*/
 }
 
 
@@ -127,13 +132,13 @@ ul[role="list"] {
 }
 
 
-
+/*se a largura for maior ou igual a 1280px = pega a fontsize pai (root)*/
 @media(width >=80em) {
 
   /* = 80*16 = 1280px - 'em' busca a fonte size pai, ou seja o root, mesmo que a pessoa mude no navegador*/
   :root {
 
-    /*fonte desktop*/
+    /*mudar todas as fontes para desktop*/
     --fs-lg: 2rem;
     /*32/16*/
     --fs-xl: 3rem;
@@ -142,18 +147,18 @@ ul[role="list"] {
     /*64/16 */
 
 
-    /*padding laterais telas grandes*/
-    --px-lg: 2rem;
-    /* 32px - largura tela grandes*/
-
-
     /*padding eixo y (cima e baixo) tela grande*/
     --py-base: 1.5rem;
     /*tela grande*/
     --py-lg: 2.5rem;
     /*tela grande*/
-    --py-xl: 2rem;
+    --py-xl: 5rem;
     /*tela grande*/
+
+    /*padding laterais telas grandes*/
+    --px-lg: 2rem;
+    /* 32px - largura tela grandes*/
+
 
 
   }
