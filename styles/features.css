@@ -1,0 +1,89 @@
+#features {
+
+  & .cards {
+    grid-template-columns: 17.5rem 1fr 1fr 17.5rem;
+    /*coluna fixa, coluna do meio que nao vai ser fixa mas com dois espaços e a outra coluna fixa*/
+    grid-template-rows: 25rem 25rem;
+    /*altura da linha de cada caixa (primeira e segunda linha*/
+    gap: 2rem;
+  }
+
+
+  & .card {
+    position: relative;
+    overflow: hidden;
+    /*nao pode transbordar nada da caixinha*/
+
+    & img.desktop-only {
+      position: absolute;
+      /*absoluto em relação ao card*/
+      max-width: 15rem;
+      filter: drop-shadow(1rem 1rem 4rem rgb(0 0 0 / 0.34));
+      /*sombra imagem*/
+    }
+  }
+
+  & .card:nth-child(1) {
+    grid-column: 1/2;
+    /*primeiro card começa na linha 1 e termina na 2*/
+  }
+
+  & .card:nth-child(2) {
+    grid-column: 2/4;
+    /*segundo card começando na linha 2 e terminando na linha 4*/
+
+    &>div {
+      /*o segundo filho do card e na primeira div*/
+      max-width: 16rem;
+    }
+
+    & .desktop-only {
+      bottom: 2rem;
+      right: 2rem;
+    }
+  }
+
+  & .card:nth-child(3) {
+    grid-column: 4/5;
+    /*a terceira caixinha deve começar no 4 e terminar no 5*/
+
+  }
+
+  & .card:nth-child(4) {
+    /*a coluna-do segundo card começando na linha 1 e terminando na linha 3*/
+    grid-column: 1/3;
+    /*o row começando na linha 2 e terminando na linha 3*/
+    grid-row: 2/3;
+
+
+    &>div {
+      /*o segundo filho do card e na primeira div*/
+      max-width: 16rem;
+      margin-left: auto;
+    }
+
+    & .desktop-only {
+      bottom: 2rem;
+      left: 2rem;
+    }
+  }
+
+  & .card:nth-child(5) {
+    /*a coluna-do segundo card começando na linha 3 e terminando na linha 5*/
+    grid-column: 3/5;
+    /*o row começando na linha 2 e terminando na linha 3*/
+    grid-row: 2/3;
+
+
+    &>div {
+      /*o segundo filho do card e na primeira div*/
+      max-width: 16rem;
+    }
+
+    & .desktop-only {
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+
+}
