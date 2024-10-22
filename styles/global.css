@@ -131,6 +131,12 @@ ul[role="list"] {
   list-style: none;
 }
 
+/*imagem dos dois celulares na tela do smartphone*/
+img {
+  max-width: 100%;
+  display: inline-block; /*mantem as propriedades inline e qualquer coisa coloca block para colocar outras features*/
+}
+
 
 /*se a largura for maior ou igual a 1280px = pega a fontsize pai (root)*/
 @media(width >=80em) {

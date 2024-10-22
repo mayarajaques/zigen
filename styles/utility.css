@@ -54,6 +54,7 @@ em tela grande um do lado do outro*/
 
 .items-center {
   align-items: center;
+
 }
 
 .gap-1 {
@@ -81,13 +82,14 @@ Aparecendo e sumindo em telas grandes*/
   .desktop-only {
     display: initial;
   }
-}
-
-
-
 /*em tela pequena um em baixo do outro
 em tela grande um do lado do outro*/
-.even-columns {
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
 }
+
+
+

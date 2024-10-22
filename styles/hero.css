@@ -1,6 +1,5 @@
 #hero {
 
-
   text-align: center;
 
   /*pegar a imagem para ficar pequeno no mobile*/
@@ -23,7 +22,7 @@
     margin-top: .5rem;
   }
 
-  &.buttons {
+  & .buttons {
     justify-content: center;
     margin-top: 2rem;
   }
@@ -31,7 +30,7 @@
 
 /*quando for desktop*/
 /*aumenta a imagem quando for desktop*/
-@media(width >= 80em) {
+@media(width >=80em) {
   #hero {
 
     background: url(../assets/bg-hero-desktop.svg) no-repeat bottom center/contain;
