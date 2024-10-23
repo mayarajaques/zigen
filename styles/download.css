@@ -1,0 +1,41 @@
+#download {
+
+  .card {
+    padding: 3rem 1.5rem 15rem;
+    position: relative;
+
+    &>img {
+      /*primeiro nivel da img*/
+      width: 14.5rem;
+      position: absolute;
+      /*em relacao ao card*/
+      bottom: 0;
+      right: -3.5rem;
+
+    }
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  /*fazendo a responsividade no desktop*/
+  @media (width>=80em) {
+    .card {
+      padding: 8.7rem 5rem;
+
+      &>div:nth-child(1) {
+        /*pegando o primeiro filho de div*/
+        max-width: 40rem;
+        /*limita o tamanho do texto e botoes de download na tela do desktop*/
+      }
+
+      &>img {
+        width: 29.125rem;
+      }
+    }
+  }
+
+
+}
