@@ -76,6 +76,7 @@ html {
 body {
   /*bg padrao*/
   background-color: var(--bg-color);
+  overflow-x: hidden; /*eixo horizontal n vai te rolagem*/
 }
 
 h1,
