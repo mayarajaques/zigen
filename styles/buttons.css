@@ -93,7 +93,7 @@
     /*absoluto ao de cima*/
     border-radius: inherit;
     /*pegar a borda herdada*/
-    inset: 1.5px; /*tamanho da borda do secondary*/
+    inset: 1px; /*tamanho da borda do secondary*/
     /*separa a borda do botão. se for 0, todo ele vai ter essa cor*/
 
     background-color: var(--bg-color);

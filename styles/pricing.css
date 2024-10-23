@@ -1,0 +1,143 @@
+#pricing {
+
+  --fs-price: 2rem;
+  /*letra padrao no mobile*/
+
+  & header {
+    text-align: center;
+  }
+
+  & h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+
+  & .cards p {
+    margin-top: .25rem;
+  }
+
+  & zin-pricing {
+    display: block;
+    padding-block: 1.5rem;
+    /*em cima e baixo*/
+    font: var(--fw-bold) var(--fs-price)/1.2 var(--ff-sans);
+    /*1.2 é line hight*/
+  }
+
+  & zin-pricing small {
+    font: var(--fw-base) 1rem/125% var(--ff-sans);
+    color: var(--text-color-secondary);
+  }
+
+  .btn {
+    width: 100%;
+    /*ocupar todo tamanho da caixa*/
+  }
+
+  & .separator {
+    height: 1px;
+    margin-block: 2rem;
+    background: radial-gradient(var(--text-color-secondary), var(--surface-color) 70%);
+  }
+
+  & li {
+    /*icone de check da lista*/
+    color: var(--text-color-secondary);
+    background: url(../assets/icons/Check.svg) no-repeat;
+    padding-left: 2.5rem;
+  }
+
+  /*pegue o ul que tem um small anterior*/
+  & ul+small {
+    display: block;
+    /*small tem display inline*/
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-color-secondary);
+  }
+
+
+
+  & .premium {
+    position: relative;
+
+    & .card {
+      padding-top: 4.25rem;
+
+      /*span é o primeiro nivel do card*/
+      &>span {
+        /*pegando o span*/
+        position: absolute;
+        /*absoluto em relacao a caixa premium */
+        top: 0;
+        left: 0;
+
+        padding: .75rem 2rem;
+
+        background: linear-gradient(90deg,
+            var(--brand-color-secondary) 0%,
+            var(--brand-color-primary) 100%
+            );
+
+        border-top-left-radius: 1.5rem;
+        /*arrendondando somente no topo esquerdo*/
+
+        border-bottom-right-radius: 1.5rem ;     /*arrendondando somente a vborda de baixo do lado direito*/
+
+        font: 600 var(--fs-sm) var(--ff-sans);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--bg-color);
+      }
+    }
+
+    padding: 2px;    /*colocando padding maior para ser possivel ver a borda gradiente*/
+
+
+    
+    /*fazendo a borda gradiente*/
+    &::before{
+      content: "";
+      
+      background: linear-gradient(90deg,
+      var(--brand-color-secondary) 0%,
+      var(--brand-color-primary) 100%
+      );
+      position: absolute;
+      inset: 0; /*preenche com o background todo o espaço disponivel na caixa*/
+      border-radius: 1.5rem;
+      z-index: -1; /*coloca por baixo da caixa*/
+    }
+  }
+
+  & .cards {
+    margin-top: 2rem;
+
+  }
+
+  /*no desktop*/
+  @media(width >=80em) {
+    /*aumenta o tamanho da fonte*/
+    --fs-price: 2.5rem;
+
+    & header {
+      max-width: 50rem;
+      margin-inline: auto;
+      /*alinhar ao centro*/
+    }
+
+    & .premium .card{
+      padding-bottom: 6rem;
+    }
+
+    .btn-md { /*deixar o botao menor*/
+      padding: .75rem 1.5rem;
+      font-size: var(--fs-md);
+    }
+
+    
+    & .card:nth-child(3) .separator{ /*ultimo card pegando o separador*/
+      margin-block: 1.5rem; /*margin em cima e baixo*/
+    }
+  }
+}
