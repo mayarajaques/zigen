@@ -1,7 +1,7 @@
 <h1 align="center"> Landing Page Zingen </h1>
 
 <p align="center">
-  Projeto desenvolvido com o curso da Rocketseat. <br>
+  Projeto desenvolvido com o curso Fullstack da Rocketseat. <br>
   <strong>Neste projeto o objetivo principal e trabalhar os conceitos de responsividade, adaptando a landing page em smartphones e desktop.</strong>
 </p>
 
